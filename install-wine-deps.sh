@@ -445,6 +445,24 @@ x11proto-input-dev x11proto-kb-dev x11proto-randr-dev x11proto-video-dev x11prot
 x11proto-xf86vidmode-dev x11proto-xinerama-dev xtrans-dev zlib1g-dev \
 libelfg0 libgif-dev libjack-dev"
 
+ubuntu_common_1604_pkgs="\
+bison ccache cvs flex fontforge gcc gettext git-core libasound2-dev libaudio-dev libc6-dev \
+libcapi20-3 libcapi20-dev libdbus-1-dev libesd0-dev libexif-dev \
+libexpat1-dev libfontconfig1-dev libfreetype6-dev libgcrypt11-dev libgl1-mesa-dev \
+libglib2.0-dev libglu1-mesa-dev libgnutls-dev libgpg-error-dev libgphoto2-dev libgsm1-dev libgstreamer0.10-dev \
+libgstreamer-plugins-base0.10-dev libice-dev libieee1284-3-dev liblcms2-dev \
+libldap2-dev libmad0 libmad0-dev libmpg123-dev libncurses5-dev \
+libogg-dev  libopenal-dev libopenal1 libpng12-dev libpopt-dev \
+libsm-dev libssl-dev libtasn1-6-dev libusb-dev libvorbis-dev \
+libvorbisfile3 libx11-dev libxau-dev libxcomposite-dev libxcursor-dev libxdmcp-dev \
+libxext-dev libxfixes-dev libxft-dev libxi-dev libxinerama-dev libxml2-dev libxmu-dev \
+libxmu-headers libxrandr-dev libxrender-dev libxslt1-dev libxt-dev libxv-dev \
+libxxf86vm-dev linux-libc-dev m4 make mesa-common-dev \
+unixodbc unixodbc-dev x11proto-composite-dev x11proto-core-dev x11proto-fixes-dev  \
+x11proto-input-dev x11proto-kb-dev x11proto-randr-dev x11proto-video-dev x11proto-xext-dev \
+x11proto-xf86vidmode-dev x11proto-xinerama-dev xtrans-dev zlib1g-dev \
+libelf1 libgif-dev libjack-dev"
+
 ubuntu_karmic_pkgs="\
 libcups2-dev \
 libfreebob0 \
@@ -575,7 +593,7 @@ fi
 
 case $distro in
 *Alpine*Linux*) apk add $alpine_pkgs;;
-Linux*Mint*18|Ubuntu*16.04) apt-get install $ubuntu_common_pkgs $ubuntu_xenial_pkgs;;
+Linux*Mint*18|Ubuntu*16.04) apt-get install $ubuntu_common_1604_pkgs $ubuntu_xenial_pkgs;;
 Linux*Mint*17|Ubuntu*14.04) apt-get install $ubuntu_common_pkgs $ubuntu_trusty_pkgs;;
 Linux*Mint*13|Ubuntu*12.04) apt-get install $ubuntu_common_pkgs $ubuntu_precise_pkgs;;
 Linux*Mint*9|Ubuntu*10.04) apt-get install $ubuntu_common_pkgs $ubuntu_karmic_pkgs;;
