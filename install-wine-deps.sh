@@ -513,6 +513,20 @@ prelink \
 winbind \
 "
 
+ubuntu_xenial_pkgs="\
+libcups2-dev \
+libjpeg-turbo8-dev \
+liblcms2-dev \
+libosmesa6-dev \
+libsane-dev \
+libtiffxx5 \
+libtiff5-dev \
+libv4l-dev \
+oss4-dev \
+prelink \
+winbind \
+"
+
 #----------------------------------------------------------------------------
 # rpm-based distros
 
@@ -561,6 +575,7 @@ fi
 
 case $distro in
 *Alpine*Linux*) apk add $alpine_pkgs;;
+Linux*Mint*18|Ubuntu*16.04) apt-get install $ubuntu_common_pkgs $ubuntu_xenial_pkgs;;
 Linux*Mint*17|Ubuntu*14.04) apt-get install $ubuntu_common_pkgs $ubuntu_trusty_pkgs;;
 Linux*Mint*13|Ubuntu*12.04) apt-get install $ubuntu_common_pkgs $ubuntu_precise_pkgs;;
 Linux*Mint*9|Ubuntu*10.04) apt-get install $ubuntu_common_pkgs $ubuntu_karmic_pkgs;;
